@@ -281,6 +281,6 @@ btnEn.addEventListener("click", () => setLanguage("en"));
 btnEs.addEventListener("click", () => setLanguage("es"));
 
 document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("preferredLang") || "es";
+  const savedLang = localStorage.getItem("preferredLang") || "en";
   setLanguage(savedLang);
 });
