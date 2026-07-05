@@ -1,9 +1,9 @@
 /* Variables de Color */
 :root {
-  --primary: #00327d;
-  --primary-container: #0047ab;
-  --secondary: #006c49;
-  --secondary-container: #6cf8bb;
+--primary: #1d4ed8;
+--primary-container: #2563eb;
+--secondary: #0ea5e9;
+--secondary-container: #dbeafe;
   --on-secondary-container: #00714d;
   --surface: #f6fafe;
   --surface-container-low: #f0f4f8;
@@ -619,7 +619,7 @@ ul {
 }
 
 .lang-btn.active {
-  background-color: #00327d; /* El azul de Aquanetix */
+  background-color: var(--primary);
   color: white;
 }
 
@@ -641,7 +641,7 @@ ul {
   font-size: 3rem;
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #0b3d91;
+  color: var(--primary);
 }
 
 .legal-date {
@@ -899,4 +899,190 @@ ul {
 }
 .login-footer-text a:hover {
   text-decoration: underline;
+}
+
+/* =========================================
+   NUEVAS SECCIONES LANDING 2026
+   ========================================= */
+
+/* Video del producto */
+.product-video-wrapper {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 50, 125, 0.15);
+}
+
+.product-video-wrapper iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
+
+/* Banner de métricas */
+.metrics-banner {
+  background: linear-gradient(135deg, var(--primary), var(--primary-container));
+  padding: 4rem 0;
+  color: white;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.metric-item {
+  text-align: center;
+}
+
+.metric-number {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: "Manrope", sans-serif;
+}
+
+.metric-label {
+  margin-top: .5rem;
+  color: rgba(255,255,255,.9);
+}
+
+@media (max-width:768px){
+  .metrics-grid{
+    grid-template-columns:1fr;
+    gap:2rem;
+  }
+}
+
+/* Sección Soluciones */
+.pro-segments-section{
+  padding:6rem 0;
+}
+
+.segments-header{
+  margin-bottom:4rem;
+}
+
+.pro-segments-container{
+  display:flex;
+  flex-direction:column;
+  gap:4rem;
+}
+
+.pro-segment-card{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3rem;
+  align-items:center;
+}
+
+.pro-segment-card.reverse .pro-segment-image{
+  order:2;
+}
+
+.pro-segment-card.reverse .pro-segment-body{
+  order:1;
+}
+
+@media(max-width:992px){
+
+.pro-segment-card,
+.pro-segment-card.reverse{
+display:flex;
+flex-direction:column;
+}
+
+.pro-segment-card.reverse .pro-segment-image,
+.pro-segment-card.reverse .pro-segment-body{
+order:unset;
+}
+
+}
+
+.pro-segment-image img{
+width:100%;
+border-radius:20px;
+display:block;
+box-shadow:0 15px 35px rgba(0,50,125,.12);
+}
+
+.pro-badge{
+display:inline-block;
+background:var(--secondary-container);
+color:var(--secondary);
+padding:.4rem .9rem;
+border-radius:999px;
+font-size:.8rem;
+font-weight:700;
+margin-bottom:1rem;
+}
+
+.pro-segment-body h3{
+font-size:2rem;
+color:var(--primary);
+margin-bottom:1rem;
+}
+
+.pro-lead{
+font-weight:700;
+margin-bottom:1rem;
+}
+
+.pro-text{
+color:var(--on-surface-variant);
+margin-bottom:2rem;
+line-height:1.7;
+}
+
+.pro-highlight{
+display:flex;
+gap:1rem;
+background:var(--surface-container-low);
+padding:1rem;
+border-radius:16px;
+margin-bottom:2rem;
+align-items:flex-start;
+}
+
+.pro-highlight .material-symbols-outlined{
+font-size:34px;
+color:var(--primary);
+}
+
+.pro-highlight-text{
+display:flex;
+flex-direction:column;
+gap:.3rem;
+}
+
+.pro-features{
+display:flex;
+flex-direction:column;
+gap:.9rem;
+margin-bottom:2rem;
+}
+
+.pro-features li{
+display:flex;
+gap:.8rem;
+align-items:flex-start;
+}
+
+.pro-features .material-symbols-outlined{
+color:var(--secondary);
+}
+
+.pro-btn{
+display:inline-block;
+background:var(--primary);
+color:white;
+padding:.9rem 1.5rem;
+border-radius:10px;
+font-weight:700;
+transition:.3s;
+}
+
+.pro-btn:hover{
+background:var(--primary-container);
 }
